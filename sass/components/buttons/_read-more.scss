@@ -1,0 +1,9 @@
+@use '../../general/variables' as *;
+.info-link {
+  padding: clamp(1rem, 0.8vw, 2rem) clamp(1.5rem, 2vw, 4rem);
+  font-size: clamp(1rem, 1.2vw, 2.4rem);
+  background-color: $color-red;
+  color: #fff;
+  font-weight: $font-medium;
+  letter-spacing: 2px;
+}

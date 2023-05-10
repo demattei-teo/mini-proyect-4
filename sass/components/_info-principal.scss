@@ -1,0 +1,31 @@
+@use '../general/variables' as *;
+.info {
+  padding: 0rem clamp(0.8rem, 1vw, 2rem);
+  &-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr;
+    row-gap: 1.25rem;
+    justify-items: start;
+    @media (min-width: 1024px) {
+      grid-area: cta;
+    }
+  }
+  &-title {
+    font-size: clamp(2.5rem, 6vw, 12rem);
+    font-weight: $font-bold;
+    @media (min-width: 64rem) {
+    }
+  }
+  &-cont-detail {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    gap: 2.5rem;
+  }
+  &-detail {
+    font-size: clamp(1rem, 1.5vw, 3rem);
+    color: #000000bb;
+    font-weight: $font-medium;
+  }
+}

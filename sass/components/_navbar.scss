@@ -1,0 +1,44 @@
+@use '../general/variables' as *;
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  background-color: $color-Very-dark;
+  padding: 0.5rem 6rem 0.5rem 0.5rem;
+  border-radius: 0.625rem 0rem 0rem 0.62rem;
+  right: 0;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.5s ease-in-out;
+  top: 100%;
+  color: #fff;
+  @media (min-width: 46.5rem) {
+    position: relative;
+    background-color: transparent;
+    transform: translateX(0%);
+    top: 0;
+    padding: 0;
+  }
+  &-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(1.25rem, 2.5vw, 6rem);
+    @media (min-width: 46.5rem) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; 
+      color: #000;
+    }
+  }
+  &-link {
+    font-size: clamp(1rem, 1.8vw, 3.6rem);
+    font-weight: $font-bold;
+    &:hover {
+    }
+  }
+}
+.header-nav-active {
+  transform: translateX(0%);
+}

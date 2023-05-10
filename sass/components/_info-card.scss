@@ -1,0 +1,33 @@
+@use '../general/variables' as *;
+
+.info-card {
+  background-color: $color-Very-dark;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr repeat(3, 1fr);
+  @media (min-width: 1024px) {
+    grid-area: info;
+  }
+  &-title {
+    font-size: clamp(3rem, 4vw, 8rem);
+    color: $color-orange;
+  }
+  &-detail,
+  &-detail-single {
+    color: #fff;
+    border-bottom: 0.0625rem solid $color-Grayish-blue;
+    padding: 0.5rem 0rem;
+
+    &-title {
+      font-weight: $font-bold;
+      font-size: clamp(1.3rem, 2vw, 4rem);
+    }
+    &-p {
+      font-size: clamp(1rem, 1.5vw, 3.7rem);
+    }
+  }
+  &-detail-single {
+    border-bottom: none;
+  }
+}

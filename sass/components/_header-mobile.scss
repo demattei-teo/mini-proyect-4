@@ -1,0 +1,52 @@
+@use '../general/variables' as *;
+
+.header-mobile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: clamp(4rem, 4.5vw, 8rem);
+  @media (min-width: 46.5rem) {
+    width: 70%;
+  }
+
+  &-cont-svg {
+    width: 3.5rem;
+    height: 3.75rem;
+    position: relative;
+    @media (min-width: 46.5rem) {
+      display: none;
+    }
+  }
+  &-menu,
+  &-close {
+    width: clamp(3.125rem, 4.5vw, 9rem);
+    height: clamp(3.125rem, 4.5vw, 9rem);
+  }
+
+  &-menu {
+    inset: 0;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+    margin: auto;
+    width: clamp(3.125rem, 4.5vw, 9rem);
+    height: clamp(3.125rem, 4.5vw, 9rem);
+  }
+  &-close {
+    inset: 0;
+    margin: auto;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  &-active {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  &-desactive {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

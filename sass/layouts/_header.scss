@@ -1,0 +1,12 @@
+.header {
+  background-color: #f6f1af;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(0.2rem, 0.3vw, 1rem) clamp(1rem, 1.5vw, 2rem);
+
+  @media (min-width: 46.5rem) {
+    flex-direction: row;
+  }
+}
